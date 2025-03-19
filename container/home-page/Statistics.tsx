@@ -81,7 +81,7 @@ const Statistics: React.FC = () => {
     <div className="bg-white py-16 px-6">
       <motion.div
         ref={ref}
-        className="max-w-7xl mx-auto grid grid-cols-4 md:grid-cols-4 gap-20 text-black"
+        className="max-w-7xl mx-auto grid grid-cols-4 md:grid-cols-4 gap-10 text-black"
         variants={containerVariants}
         initial="hidden"
         animate={controls}
@@ -89,13 +89,13 @@ const Statistics: React.FC = () => {
         {stats.map((stat, index) => (
           <motion.div
             key={index}
-            className="text-center"
+            className="text-center w-full" // Ensure consistent width
             variants={itemVariants}
           >
             <h3 className="text-2xl mb-5 font-medium text-start">{stat.title}</h3>
             <hr />
             <motion.p
-              className="text-8xl my-3 font-semibold ml-2 mt-3 text-start mb-4"
+              className="text-8xl my-3 font-semibold ml-2 mt-3 text-start mb-4 overflow-hidden truncate" // Prevent overflow
               variants={valueVariants}
             >
               {animatedValues[index]}+

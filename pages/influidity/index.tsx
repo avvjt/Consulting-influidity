@@ -12,6 +12,7 @@ import {
 import { useEffect } from "react";
 import { Curve, Ready } from "@/components";
 import Process from "@/container/home-page/Process";
+import HeroInfluidity from "@/container/home-page/HeroInfluidity";
 
 export default function About() {
 	useEffect(() => {
@@ -23,8 +24,7 @@ export default function About() {
 	return (
 		<>
 			<Curve backgroundColor={"#f1f1f1"}>
-				<Heropresentation />
-				<Publication/>
+				<HeroInfluidity />
 				<Heroabout />
 				<Principles />
 				<Aboutabout />
